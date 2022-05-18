@@ -2,6 +2,30 @@ import prompt
 from random import randint
 
 
+def questioning():
+    question = randint(1, 100)
+    print(f'Question: {question}')
+
+    answer = prompt.string('Your answer: ').lower().strip()
+    right_answer = 'yes' if question % 2 == 0 else 'no'
+    return answer, right_answer
+
+
+def game_over(answer, right_answer, name):
+    print(f"'{answer}' is wrong answer. "
+          f"Correct answer was '{right_answer}'.")
+    # This print in two lines printing on one line
+    print(f"Let's try again, {name}!")
+    exit()
+
+
+def checking_answer(answer, right_answer, name):
+    if answer == right_answer:
+        print('Correct!')
+    else:
+        game_over(answer, right_answer, name)
+
+
 def main():
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
@@ -9,22 +33,9 @@ def main():
 
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
-        question = randint(1, 100)
-        print(f'Question: {question}')
-
-        answer = prompt.string('Your answer: ').lower().strip()
-        right_answer = 'yes' if question % 2 == 0 else 'no'
-
-        if answer == right_answer:
-            print('Correct!')
-            continue
-        else:
-            print(f"'{answer}' is wrong answer. "
-                  f"Correct answer was '{right_answer}'.")
-            # This print in two lines printing on one line
-            print(f"Let's try again, {name}!")
-            exit()
-
+        answer, right_answer = questioning()
+        checking_answer(answer, right_answer, name)
+    # Exiting 'for' = win
     print(f'Congratulations, {name}!')
 
 
