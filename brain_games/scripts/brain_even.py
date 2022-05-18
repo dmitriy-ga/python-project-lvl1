@@ -11,19 +11,16 @@ def questioning():
     return answer, right_answer
 
 
-def game_over(answer, right_answer, name):
-    print(f"'{answer}' is wrong answer. "
-          f"Correct answer was '{right_answer}'.")
-    # This print in two lines printing on one line
-    print(f"Let's try again, {name}!")
-    exit()
-
-
 def checking_answer(answer, right_answer, name):
     if answer == right_answer:
         print('Correct!')
     else:
-        game_over(answer, right_answer, name)
+        # Game over, exit
+        print(f"'{answer}' is wrong answer. "
+              f"Correct answer was '{right_answer}'.")
+        # This print in two lines printing on one line
+        print(f"Let's try again, {name}!")
+        exit()
 
 
 def main():
