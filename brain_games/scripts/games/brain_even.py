@@ -1,5 +1,5 @@
 import prompt
-from brain_games.scripts.common_games_funcs import checking_answer
+from brain_games.scripts.common_games_funcs import checking_answer, greeting
 from random import randint
 
 
@@ -13,10 +13,7 @@ def questioning():
 
 
 def main():
-    print("Welcome to the Brain Games!")
-    name = prompt.string('May I have your name? ')
-    print(f'Hello, {name}!')
-
+    name = greeting()
     print('Answer "yes" if the number is even, otherwise answer "no".')
     for i in range(3):
         answer, right_answer = questioning()

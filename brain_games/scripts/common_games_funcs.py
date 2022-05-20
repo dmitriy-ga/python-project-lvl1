@@ -1,3 +1,6 @@
+import prompt
+
+
 def checking_answer(answer, right_answer, name):
     if answer == right_answer:
         print('Correct!')
@@ -8,3 +11,10 @@ def checking_answer(answer, right_answer, name):
         # This print in two lines printing on one line
         print(f"Let's try again, {name}!")
         exit()
+
+
+def greeting():
+    print("Welcome to the Brain Games!")
+    name = prompt.string('May I have your name? ')
+    print(f'Hello, {name}!')
+    return name
