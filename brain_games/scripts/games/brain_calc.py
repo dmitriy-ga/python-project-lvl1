@@ -20,7 +20,6 @@ def question_calc_subtraction():
     num2 = randint(1, 100)
     if num2 > num1:
         num1, num2 = num2, num1
-        #
     print(f'Question: {num1} - {num2}')
     answer = prompt.integer('Your answer: ')
     right_answer = num1 - num2
@@ -28,7 +27,7 @@ def question_calc_subtraction():
 
 
 def question_calc_multiply():
-    num1 = randint(1, 100)
+    num1 = randint(2, 100)
     num2 = randint(2, 10)
     print(f'Question: {num1} * {num2}')
     answer = prompt.integer('Your answer: ')
