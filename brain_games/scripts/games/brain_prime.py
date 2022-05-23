@@ -3,7 +3,7 @@ from brain_games.scripts.common_games_funcs import checking_answer, greeting
 from random import randint
 
 
-def isprime(num):
+def is_prime(num):
     if num <= 1:
         return False
     # Negative, 1 and 0 is not a prime numbers!
@@ -19,7 +19,7 @@ def questioning():
     question = randint(1, 100)
     print(f'Question: {question}')
     answer = prompt.string('Your answer: ').lower().strip()
-    right_answer = 'yes' if isprime(question) else 'no'
+    right_answer = 'yes' if is_prime(question) else 'no'
     return answer, right_answer
 
 
