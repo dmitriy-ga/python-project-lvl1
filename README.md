@@ -4,7 +4,7 @@
 [![Test Coverage](https://api.codeclimate.com/v1/badges/be21041e068cd089cc04/test_coverage)](https://codeclimate.com/github/dmitriy-ga/python-project-lvl1/test_coverage)
 [![Lint-check](https://github.com/dmitriy-ga/python-project-lvl1/actions/workflows/checks.yml/badge.svg)](https://github.com/dmitriy-ga/python-project-lvl1/actions/workflows/checks.yml)
 ### Description
-Mind Games - bundle of math mini-games. Each game has 3 rounds, needs to beaten in a row to win:
+Mind Games - bundle of math mini-games. Each game has 3 rounds, needs to beat them in a row to win:
 
 | Game              | Description                                 |
 |-------------------|---------------------------------------------|
