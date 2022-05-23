@@ -17,7 +17,7 @@ def questioning(question, prg_size):
     rdm_index = randint(0, prg_size - 2)
     right_answer = question[rdm_index]
     question[rdm_index] = '..'
-    print(f'Question: {question}')
+    print('Question: ' + str(question).replace(',', '').replace('[', '').replace(']', ''))
     answer = prompt.integer('Your answer: ')
     return answer, right_answer
 
