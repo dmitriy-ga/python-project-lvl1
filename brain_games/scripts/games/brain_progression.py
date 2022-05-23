@@ -13,11 +13,19 @@ def create_question():
     return question, prg_size
 
 
+def remove_list_designation(list_to_str):
+    list_to_str = str(list_to_str).replace(',', '')
+    list_to_str = list_to_str.replace('[', '')
+    list_to_str = list_to_str.replace(']', '')
+    list_to_str = list_to_str.replace('\'', '')
+    return list_to_str
+
+
 def questioning(question, prg_size):
     rdm_index = randint(0, prg_size - 2)
     right_answer = question[rdm_index]
     question[rdm_index] = '..'
-    print('Question: ' + str(question).replace(',', '').replace('[', '').replace(']', ''))
+    print(f'Question: {remove_list_designation(question)}')
     answer = prompt.integer('Your answer: ')
     return answer, right_answer
 
