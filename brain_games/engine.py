@@ -1,4 +1,4 @@
-from brain_games.logic import *  # noqa: F401, F403
+from brain_games.games import *  # noqa: F401, F403
 from brain_games.common_games_funcs import greeting, checking_answer
 
 ROUNDS = 3
