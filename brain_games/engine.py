@@ -1,4 +1,8 @@
-from brain_games.games import *  # noqa: F401, F403
+from brain_games.games import (logic_even,
+                               logic_calc,
+                               logic_gcd,
+                               logic_prime,
+                               logic_progression)
 import prompt
 
 ROUNDS = 3
@@ -6,8 +10,7 @@ games_list = {'even': logic_even.main,
               'calc': logic_calc.main,
               'gcd': logic_gcd.main,
               'prime': logic_prime.main,
-              'progression': logic_progression.main
-              }
+              'progression': logic_progression.main}
 
 
 def checking_answer(answer, right_answer, name):
