@@ -4,7 +4,7 @@ TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def main():
-    brain_games.engine.main('logic_even.main', TASK)
+    brain_games.engine.main('even', TASK)
 
 
 if __name__ == '__main__':

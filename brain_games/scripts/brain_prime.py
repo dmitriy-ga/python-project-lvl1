@@ -4,7 +4,7 @@ TASK = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 
 
 def main():
-    brain_games.engine.main('logic_prime.main', TASK)
+    brain_games.engine.main('prime', TASK)
 
 
 if __name__ == '__main__':

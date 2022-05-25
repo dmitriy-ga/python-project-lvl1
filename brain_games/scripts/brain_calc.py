@@ -4,7 +4,7 @@ TASK = 'What is the result of the expression?'
 
 
 def main():
-    brain_games.engine.main('logic_calc.main', TASK)
+    brain_games.engine.main('calc', TASK)
 
 
 if __name__ == '__main__':

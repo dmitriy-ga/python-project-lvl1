@@ -2,6 +2,12 @@ from brain_games.games import *  # noqa: F401, F403
 import prompt
 
 ROUNDS = 3
+games_list = {'even': logic_even.main,
+              'calc': logic_calc.main,
+              'gcd': logic_gcd.main,
+              'prime': logic_prime.main,
+              'progression': logic_progression.main
+              }
 
 
 def checking_answer(answer, right_answer, name):
@@ -26,7 +32,7 @@ def greeting():
 def main(game, task):
     name = greeting()
     print(task)
-    game_to_start = eval(game)
+    game_to_start = games_list[game]
     for i in range(ROUNDS):
         answer, right_answer = game_to_start()
         checking_answer(answer, right_answer, name)
