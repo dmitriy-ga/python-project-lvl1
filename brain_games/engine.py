@@ -13,16 +13,21 @@ games_list = {'even': logic_even.main,
               'progression': logic_progression.main}
 
 
-def checking_answer(answer, right_answer, name):
-    if answer == right_answer:
+def checking_answer(answer, right_answer):
+    if str(answer) == str(right_answer):
         print('Correct!')
+        winning = True
     else:
-        # Game over, exit
-        print(f"'{answer}' is wrong answer. "
-              f"Correct answer was '{right_answer}'.")
-        # This print in two lines printing on one line
-        print(f"Let's try again, {name}!")
-        exit()
+        winning = False
+    return winning
+
+
+def asking(started_game):
+    if started_game == ['even', 'gcd', 'prime']:
+        answer = prompt.integer('Your answer: ')
+    else:
+        answer = prompt.string('Your answer: ').lower().strip()
+    return answer
 
 
 def greeting():
@@ -36,8 +41,18 @@ def main(game, task):
     name = greeting()
     print(task)
     game_to_start = games_list[game]
+    winning = None
     for i in range(ROUNDS):
-        answer, right_answer = game_to_start()
-        checking_answer(answer, right_answer, name)
-    # Exiting 'for' = win
-    print(f'Congratulations, {name}!')
+        question, right_answer = game_to_start()
+        print(question)
+        answer = asking(game)
+        winning = checking_answer(answer, right_answer)
+        if not winning:
+            # Game over, exit
+            print(f"'{answer}' is wrong answer. "
+                  f"Correct answer was '{right_answer}'.")
+            # This print in two lines printing on one line
+            print(f"Let's try again, {name}!")
+            break
+    if winning:
+        print(f'Congratulations, {name}!')

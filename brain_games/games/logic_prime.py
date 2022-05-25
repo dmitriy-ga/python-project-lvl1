@@ -1,4 +1,3 @@
-import prompt
 from random import randint
 
 MIN_NUM = 1
@@ -18,11 +17,10 @@ def is_prime(num):
 
 
 def main():
-    question = randint(MIN_NUM, MAX_NUM)
-    print(f'Question: {question}')
-    answer = prompt.string('Your answer: ').lower().strip()
-    right_answer = 'yes' if is_prime(question) else 'no'
-    return answer, right_answer
+    random_num = randint(MIN_NUM, MAX_NUM)
+    question = f'Question: {random_num}'
+    right_answer = 'yes' if is_prime(random_num) else 'no'
+    return question, right_answer
 
 
 if __name__ == '__main__':

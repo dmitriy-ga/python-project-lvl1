@@ -1,4 +1,3 @@
-import prompt
 from random import randint
 
 PRG_SIZE = 10
@@ -25,19 +24,13 @@ def remove_list_designation(list_to_str):
     return list_to_str
 
 
-def questioning(question):
+def main():
+    question = create_question()
     rdm_index = randint(0, PRG_SIZE - 2)
     right_answer = question[rdm_index]
     question[rdm_index] = '..'
-    print(f'Question: {remove_list_designation(question)}')
-    answer = prompt.integer('Your answer: ')
-    return answer, right_answer
-
-
-def main():
-    question = create_question()
-    answer, right_answer = questioning(question)
-    return answer, right_answer
+    question = f'Question: {remove_list_designation(question)}'
+    return question, right_answer
 
 
 if __name__ == '__main__':
