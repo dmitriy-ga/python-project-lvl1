@@ -23,6 +23,8 @@ def checking_answer(answer, right_answer):
 
 
 def asking(started_game):
+    # prompt (0.4.1) don't have function to expect both integer and string
+    # engine needs to decide what input using for game
     if started_game == ['even', 'gcd', 'prime']:
         answer = prompt.integer('Your answer: ')
     else:
