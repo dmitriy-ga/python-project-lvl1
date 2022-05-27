@@ -24,14 +24,10 @@ def remove_list_designation(list_to_str):
     return list_to_str
 
 
-def main():
+def gaming():
     question = create_question()
     rdm_index = randint(0, PRG_SIZE - 2)
     right_answer = question[rdm_index]
     question[rdm_index] = '..'
     question = remove_list_designation(question)
     return question, right_answer
-
-
-if __name__ == '__main__':
-    main()

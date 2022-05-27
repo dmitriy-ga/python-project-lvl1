@@ -6,11 +6,11 @@ from brain_games.games import (logic_even,
 import prompt
 
 ROUNDS_COUNT = 3
-games_list = {'even': logic_even.main,
-              'calc': logic_calc.main,
-              'gcd': logic_gcd.main,
-              'prime': logic_prime.main,
-              'progression': logic_progression.main}
+games_list = {'even': logic_even.gaming,
+              'calc': logic_calc.gaming,
+              'gcd': logic_gcd.gaming,
+              'prime': logic_prime.gaming,
+              'progression': logic_progression.gaming}
 
 
 def checking_answer(answer, right_answer):
@@ -39,7 +39,7 @@ def greeting():
     return name
 
 
-def main(game, task):
+def gaming(game, task):
     name = greeting()
     print(task)
     game_to_start = games_list[game]

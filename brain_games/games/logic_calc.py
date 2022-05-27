@@ -35,14 +35,10 @@ def question_calc_multiply():
     return question, right_answer
 
 
-def main():
+def gaming():
     calc_modes = [question_calc_addition,
                   question_calc_subtraction,
                   question_calc_multiply]
 
     question, right_answer = choice(calc_modes)()
     return question, right_answer
-
-
-if __name__ == '__main__':
-    main()

@@ -16,11 +16,7 @@ def is_prime(num):
     return True
 
 
-def main():
+def gaming():
     random_num = randint(MIN_NUM, MAX_NUM)
     right_answer = 'yes' if is_prime(random_num) else 'no'
     return random_num, right_answer
-
-
-if __name__ == '__main__':
-    main()
