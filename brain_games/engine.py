@@ -46,7 +46,7 @@ def main(game, task):
     winning = None
     for i in range(ROUNDS_COUNT):
         question, right_answer = game_to_start()
-        print(question)
+        print(f'Question: {question}')
         answer = asking(game)
         winning = checking_answer(answer, right_answer)
         if not winning:

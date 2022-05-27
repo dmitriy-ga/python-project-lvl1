@@ -29,7 +29,7 @@ def main():
     rdm_index = randint(0, PRG_SIZE - 2)
     right_answer = question[rdm_index]
     question[rdm_index] = '..'
-    question = f'Question: {remove_list_designation(question)}'
+    question = remove_list_designation(question)
     return question, right_answer
 
 

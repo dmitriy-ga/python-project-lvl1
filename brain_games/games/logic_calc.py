@@ -10,7 +10,7 @@ MAX_FACTOR2 = 10
 def question_calc_addition():
     num1 = randint(MIN_TERM, MAX_TERM)
     num2 = randint(MIN_TERM, MAX_TERM)
-    question = f'Question: {num1} + {num2}'
+    question = f'{num1} + {num2}'
     right_answer = num1 + num2
     return question, right_answer
 
@@ -21,7 +21,7 @@ def question_calc_subtraction():
     if num2 > num1:
         num1, num2 = num2, num1
     # Making potential number positive
-    question = f'Question: {num1} - {num2}'
+    question = f'{num1} - {num2}'
     right_answer = num1 - num2
     return question, right_answer
 
@@ -30,7 +30,7 @@ def question_calc_multiply():
     num1 = randint(MIN_FACTOR, MAX_FACTOR1)
     num2 = randint(MIN_FACTOR, MAX_FACTOR2)
     # num2 must be 2-10 to be not so hard
-    question = f'Question: {num1} * {num2}'
+    question = f'{num1} * {num2}'
     right_answer = num1 * num2
     return question, right_answer
 

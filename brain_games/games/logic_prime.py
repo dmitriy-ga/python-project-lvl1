@@ -18,9 +18,8 @@ def is_prime(num):
 
 def main():
     random_num = randint(MIN_NUM, MAX_NUM)
-    question = f'Question: {random_num}'
     right_answer = 'yes' if is_prime(random_num) else 'no'
-    return question, right_answer
+    return random_num, right_answer
 
 
 if __name__ == '__main__':
