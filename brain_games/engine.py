@@ -5,7 +5,7 @@ from brain_games.games import (logic_even,
                                logic_progression)
 import prompt
 
-ROUNDS = 3
+ROUNDS_COUNT = 3
 games_list = {'even': logic_even.main,
               'calc': logic_calc.main,
               'gcd': logic_gcd.main,
@@ -42,7 +42,7 @@ def main(game, task):
     print(task)
     game_to_start = games_list[game]
     winning = None
-    for i in range(ROUNDS):
+    for i in range(ROUNDS_COUNT):
         question, right_answer = game_to_start()
         print(question)
         answer = asking(game)
