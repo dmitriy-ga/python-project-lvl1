@@ -22,16 +22,6 @@ def checking_answer(answer, right_answer):
     return winning
 
 
-def asking(started_game):
-    # prompt (0.4.1) don't have function to expect both integer and string
-    # engine needs to decide what input using for game
-    if started_game == ['even', 'gcd', 'prime']:
-        answer = prompt.integer('Your answer: ')
-    else:
-        answer = prompt.string('Your answer: ').lower().strip()
-    return answer
-
-
 def greeting():
     print("Welcome to the Brain Games!")
     name = prompt.string('May I have your name? ')
@@ -47,7 +37,7 @@ def gaming(game, task):
     for i in range(ROUNDS_COUNT):
         question, right_answer = game_to_start()
         print(f'Question: {question}')
-        answer = asking(game)
+        answer = prompt.string('Your answer: ').lower()
         winning = checking_answer(answer, right_answer)
         if not winning:
             # Game over, exit
