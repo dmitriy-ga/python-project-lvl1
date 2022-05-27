@@ -1,16 +1,6 @@
-from brain_games.games import (logic_even,
-                               logic_calc,
-                               logic_gcd,
-                               logic_prime,
-                               logic_progression)
 import prompt
 
 ROUNDS_COUNT = 3
-games_list = {'even': logic_even.gaming,
-              'calc': logic_calc.gaming,
-              'gcd': logic_gcd.gaming,
-              'prime': logic_prime.gaming,
-              'progression': logic_progression.gaming}
 
 
 def checking_answer(answer, right_answer):
@@ -32,10 +22,9 @@ def greeting():
 def gaming(game, task):
     name = greeting()
     print(task)
-    game_to_start = games_list[game]
     winning = None
     for i in range(ROUNDS_COUNT):
-        question, right_answer = game_to_start()
+        question, right_answer = game()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ').lower()
         winning = checking_answer(answer, right_answer)
