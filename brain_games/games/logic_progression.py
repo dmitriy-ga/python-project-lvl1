@@ -8,7 +8,7 @@ PRG_STEP_MAX = 9
 # prg stands for progression
 
 
-def create_question():
+def create_random_progression():
     prg_start = randint(PRG_START_MIN, PRG_START_MAX)
     prg_step = randint(PRG_STEP_MIN, PRG_STEP_MAX)
     prg_finish = prg_start + (prg_step * (PRG_SIZE - 1))
@@ -16,18 +16,13 @@ def create_question():
     return question
 
 
-def remove_list_designation(list_to_str):
-    list_to_str = str(list_to_str).replace(',', '')
-    list_to_str = list_to_str.replace('[', '')
-    list_to_str = list_to_str.replace(']', '')
-    list_to_str = list_to_str.replace('\'', '')
-    return list_to_str
-
-
 def gaming():
-    question = create_question()
+    question = create_random_progression()
     rdm_index = randint(0, PRG_SIZE - 2)
+
     right_answer = question[rdm_index]
     question[rdm_index] = '..'
-    question = remove_list_designation(question)
+
+    symbols_to_remove = str.maketrans('', '', "[],'")
+    question = str(question).translate(symbols_to_remove)
     return question, right_answer
