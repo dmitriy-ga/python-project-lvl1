@@ -1,6 +1,7 @@
 from math import gcd
 from random import randint
 
+TASK = 'Find the greatest common divisor of given numbers.'
 MIN_NUM = 1
 MAX_NUM = 100
 

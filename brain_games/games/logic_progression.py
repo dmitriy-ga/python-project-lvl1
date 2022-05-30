@@ -1,5 +1,6 @@
 from random import randint
 
+TASK = 'What number is missing in the progression?'
 PRG_SIZE = 10
 PRG_START_MIN = 1
 PRG_START_MAX = 10

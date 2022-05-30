@@ -1,5 +1,6 @@
 from random import choice, randint
 
+TASK = 'What is the result of the expression?'
 MIN_NUMBER = 1
 MAX_NUMBER = 100
 

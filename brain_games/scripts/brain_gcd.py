@@ -1,11 +1,9 @@
 import brain_games.engine
 from brain_games.games import logic_gcd
 
-TASK = 'Find the greatest common divisor of given numbers.'
-
 
 def main():
-    brain_games.engine.gaming(logic_gcd.gaming, TASK)
+    brain_games.engine.gaming(logic_gcd)
 
 
 if __name__ == '__main__':

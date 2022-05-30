@@ -1,5 +1,6 @@
 from random import randint
 
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_NUM = 1
 MAX_NUM = 100
 

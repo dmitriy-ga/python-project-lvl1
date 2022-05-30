@@ -10,11 +10,11 @@ def greeting():
     return name
 
 
-def gaming(game, task):
+def gaming(game):
     name = greeting()
-    print(task)
+    print(game.TASK)
     for i in range(ROUNDS_COUNT):
-        question, right_answer = game()
+        question, right_answer = game.gaming()
         print(f'Question: {question}')
         answer = prompt.string('Your answer: ').lower()
         if str(answer) == str(right_answer):
