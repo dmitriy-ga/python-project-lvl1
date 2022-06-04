@@ -1,11 +1,11 @@
 from random import randint
 
 TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
-MIN_NUM = 1
-MAX_NUM = 100
+MIN_NUMBER = 1
+MAX_NUMBER = 100
 
 
-def gaming():
-    random_num = randint(MIN_NUM, MAX_NUM)
-    right_answer = 'yes' if random_num % 2 == 0 else 'no'
-    return random_num, right_answer
+def run_game():
+    random_number = randint(MIN_NUMBER, MAX_NUMBER)
+    right_answer = 'yes' if random_number % 2 == 0 else 'no'
+    return random_number, right_answer

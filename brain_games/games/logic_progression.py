@@ -1,28 +1,28 @@
 from random import randint
 
 TASK = 'What number is missing in the progression?'
-PRG_SIZE = 10
-PRG_START_MIN = 1
-PRG_START_MAX = 10
-PRG_STEP_MIN = 2
-PRG_STEP_MAX = 9
-# prg stands for progression
+PROG_SIZE = 10
+PROG_START_MIN = 1
+PROG_START_MAX = 10
+PROG_STEP_MIN = 2
+PROG_STEP_MAX = 9
+# prog stands for progression
 
 
 def create_random_progression():
-    prg_start = randint(PRG_START_MIN, PRG_START_MAX)
-    prg_step = randint(PRG_STEP_MIN, PRG_STEP_MAX)
-    prg_finish = prg_start + (prg_step * (PRG_SIZE - 1))
-    question = list(range(prg_start, prg_finish, prg_step))
+    prog_start = randint(PROG_START_MIN, PROG_START_MAX)
+    prog_step = randint(PROG_STEP_MIN, PROG_STEP_MAX)
+    prog_finish = prog_start + (prog_step * (PROG_SIZE - 1))
+    question = list(range(prog_start, prog_finish, prog_step))
     return question
 
 
-def gaming():
+def run_game():
     question = create_random_progression()
-    rdm_index = randint(0, PRG_SIZE - 2)
+    random_index = randint(0, PROG_SIZE - 2)
 
-    right_answer = question[rdm_index]
-    question[rdm_index] = '..'
+    right_answer = question[random_index]
+    question[random_index] = '..'
 
     symbols_to_remove = str.maketrans('', '', "[],'")
     question = str(question).translate(symbols_to_remove)
